@@ -1,3 +1,10 @@
 public String whichTwo(Integer a, Integer b, Integer c) {
-    
+    if (a == b + c) {
+        return 'a';
+    } else if (b == a + c) {
+        return 'b';
+    } else if (c == a + b) {
+        return 'c';
+    }
+    return '';
 }

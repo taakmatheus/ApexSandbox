@@ -1,3 +1,10 @@
 public String aOrAn(String word) {
-    
+    if (word.startsWith('a') || 
+        word.startsWith('e') || 
+        word.startsWith('i') ||
+        word.startsWith('o') ||
+        word.startsWith('u')) {
+            return 'an ' + word;
+    }
+    return 'a ' + word;
 }
