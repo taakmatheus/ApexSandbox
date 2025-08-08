@@ -1,4 +1,0 @@
-public Id insertStudent(String name, String email) {
-    
-    
-}

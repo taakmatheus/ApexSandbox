@@ -1,3 +1,0 @@
-public Integer diff(Integer a, Integer b) {
-    
-}
