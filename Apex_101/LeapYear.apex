@@ -1,4 +1,11 @@
 public Boolean isLeapYear(Integer year) {
-    if (Math.Mod(year,100)==0){ //means it's divisible by 100
-        
+    if(Math.mod(year, 4) == 0){
+        if(Math.mod(year, 100) == 0){
+            if(Math.mod(year, 400) == 0){
+                return true;
+            }
+        }else
+            return true;
+    }
+    return false;
 }
