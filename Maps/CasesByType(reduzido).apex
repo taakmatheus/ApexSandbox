@@ -1,2 +1,1 @@
-public Map<String, List<Case>> casesByType(List<Case> cases) {
-    Map<String,List<Case>> newSet = new Map<String,List<Case>>();for (Case iCase:cases){if (iCase.Type !=null){Object obj = (!newSet.containsKey(iCase.Type)) ? newSet.put(iCase.Type,new Case[]{}) : null;newSet.get(iCase.Type).add(iCase);}}return newSet;}
+public Map<String, List<Case>> casesByType(List<Case> cases) {Map<String,List<Case>> newSet = new Map<String,List<Case>>();for (Case iCase:cases){if (iCase.Type !=null){Object obj = (!newSet.containsKey(iCase.Type)) ? newSet.put(iCase.Type,new Case[]{}) : null;newSet.get(iCase.Type).add(iCase);}}return newSet;}
