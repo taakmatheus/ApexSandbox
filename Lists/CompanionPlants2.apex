@@ -1,6 +1,6 @@
 public Boolean companionPlants(List<string> plants) {
     //lettuce and cucumbers
-    //lettuce and onions
+    //lettuce and onions.
     //onions and carrots
     //onions and tomatoes
     boolean retorno = null;
