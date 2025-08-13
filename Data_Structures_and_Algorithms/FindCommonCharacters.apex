@@ -1,8 +1,8 @@
 public List<String> commonChars(List<String> strs){
-    Map<Integer, Integer> strMap = new Map<Integer, Integer>();
+    Map<String, Integer> strMap = new Map<String, Integer>();
     Integer length = strs[0].length();
     for (Integer i = 0; i < length; i++) {
-        Integer ch = strs[0].charAt(i);
+        String ch = strs[0].substring(i, i + 1);
         if (strMap.containsKey(ch)) {
             strMap.put(ch, strMap.get(ch) + 1);
         } else {
@@ -11,16 +11,16 @@ public List<String> commonChars(List<String> strs){
     }
     length = strs.size();
     for (Integer i = 1; i < length; i++) {
-        Map<Integer, Integer> othersStrMap = new Map<Integer, Integer>();
+        Map<String, Integer> othersStrMap = new Map<String, Integer>();
         for (Integer j = 0; j < strs[i].length(); j++) {
-            Integer ch = strs[i].charAt(j);
+            String ch = strs[i].substring(j, j + 1);
             if (othersStrMap.containsKey(ch)) {
                 othersStrMap.put(ch, othersStrMap.get(ch) + 1);
             } else {
                 othersStrMap.put(ch, 1);
             }
         }
-        for (Integer k : strMap.keySet()) {
+        for (String k : strMap.keySet()) {
             if (othersStrMap.containsKey(k)) {
                 strMap.put(k, Math.min(strMap.get(k), othersStrMap.get(k)));
             } else {
@@ -28,7 +28,12 @@ public List<String> commonChars(List<String> strs){
             }
         }
     }
-    return strMap;
+    List<String> result = new List<String>();
+    for (String key : strMap.keySet()) {
+        Integer count = strMap.get(key);
+        for (Integer i = 0; i < count; i++) {
+            result.add(key);
+        }
+    }
+    return result;
 }
-
-//Código acima não funciona. Foi apenas a última tentativa que fiz no site.
