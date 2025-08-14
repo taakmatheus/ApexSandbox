@@ -8,6 +8,5 @@ public Map<String, List<Case>> casesByType(List<Case> cases) {
                 casesByType.put(caso.type, lista);
             }
         }
-    }
-    return casesByType;
+    } return casesByType;
 }
