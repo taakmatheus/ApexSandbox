@@ -1,10 +1,10 @@
 public Integer fibonacci(Integer n) {
-    Integer proximo, anterior = 0, atual = 1;
+    Integer next, previous = 0, current = 1;
     for(Integer i = 1; i < n; i++){
-            proximo = anterior + atual;
-            anterior = atual;
-            atual = proximo;
+            next = previous + current;
+            previous = current;
+            current = next;
     }
 
-    return atual;
+    return current;
 }
