@@ -1,3 +1,5 @@
+// https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_primitives.htm
+
 public String convert15to18DigitId(String fifteenDigit)
 {
     if(fifteenDigit == null) return null;
