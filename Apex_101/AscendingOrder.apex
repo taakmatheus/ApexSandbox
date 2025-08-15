@@ -1,6 +1,3 @@
 public Boolean ascendingOrder(Integer a, Integer b, Integer c) {
-    if (a > b || b > c) {
-        return false;
-    }
-    return true;
+    return a <= b && b <= c;
 }

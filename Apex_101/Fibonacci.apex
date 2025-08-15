@@ -1,14 +1,10 @@
 public Integer fibonacci(Integer n) {
-    Integer[] sequence = new Integer[2];
-    sequence[0] = 1;
-    sequence[1] = 1;
+    List<Integer> sequence = new List<Integer>{ 1, 1 };
     if (n <= 2) {
         return sequence[n - 1];
     }
     for (Integer i = 2; i < n; i++) {
-        Integer temp = sequence[0];
-        sequence[0] = sequence[1];
-        sequence[1] += temp;
+        sequence.add(sequence[i - 2] + sequence[i - 1]);
     }
-    return sequence[1];
+    return sequence[n - 1];
 }

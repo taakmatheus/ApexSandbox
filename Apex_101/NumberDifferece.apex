@@ -1,6 +1,3 @@
 public Integer diff(Integer a, Integer b) {
-    if (a > b) {
-        return a - b;
-    }
-    return b - a;
+    return Math.abs(a - b);
 }
