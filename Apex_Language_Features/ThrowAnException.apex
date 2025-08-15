@@ -1,6 +1,15 @@
-public List<Account> checkAccounts(List<Account> accounts)
-{
-    
+public List<Account> checkAccounts(List<Account> accounts){
+  if(accounts == null){
+    throw new IllegalArgumentException ('accounts should not be null');
+  }
+
+  for(Account conta : accounts){
+        if(String.isBlank(conta.BillingCity)){
+            throw new AccountException ('Invalid BillingCity');
+        }
+    }
+
+    return accounts;
 }
 
 //do not remove the following custom-defined exception
