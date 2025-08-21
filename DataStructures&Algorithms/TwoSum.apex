@@ -1,20 +1,16 @@
-public void plusOne(List<Integer> numbers) {
-    Integer total = 0, multiplicador = 1;
-    for(Integer i = numbers.size()-1; i >= 0; i-- ){
-        total += numbers[i] * multiplicador;
-        multiplicador *= 10;
-    }
-    total++;
-    List<Integer> resultList = new List<Integer>();
-    for(Integer i = numbers.size()-1; i >= 0; i-- ){
-        integer temp = total;
-        while(total >= 10){
-            temp/=10;
+public static List<Integer> twoSum(List<Integer> nums, Integer target) {
+    map<Integer, Integer> numberMap = new map<Integer, Integer>();
+    List<Integer> result = new List<Integer>();
+    for(Integer i = 0; i < nums.size(); i++){
+        Integer complemento = target - nums[i];
+        if(numberMap.containsKey(complemento)){
+            result.add(numberMap.get(complemento));
+            result.add(i);
+            return result;
         }
+        numberMap.put(nums[i], i);
 
-        resultList.add(temp);
-        total /= 10;
     }
-    numbers.clear();
-    numbers.addAll(resultList);
+    return result;
+
 }

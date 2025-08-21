@@ -1,0 +1,41 @@
+
+public static Boolean sameString(String str1, String str2){
+  // solution
+
+    str1 = process(str1);
+
+    str2 = process(str2);
+
+    return str1.equals(str2);
+
+}
+
+public static String process(String s){
+
+    List<String> sp = s.split('');
+
+    String res = '';
+
+    Integer i = 0, count = 0;
+
+    i = sp.size() - 1;
+
+    while (i >= 0){
+
+        if (sp.get(i) == '#'){
+
+            count++;
+
+        } else if (count > 0){
+
+            count--;
+
+        }else res += sp.get(i);
+
+        i--;
+
+    }
+
+    return res;
+
+}

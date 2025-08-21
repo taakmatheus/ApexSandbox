@@ -1,0 +1,16 @@
+public static Integer maxSubArraySum(List<Integer> nums, Integer target){
+    Integer maxSum = 0, tempSum = 0;
+    for (Integer i = 0; i < target; i++){
+        maxSum += nums[i];
+
+    }
+
+    tempSum = maxSum;
+
+    for (Integer i = target; i < nums.size(); i++){
+        tempSum = tempSum - nums[i-target] + nums[i];
+        maxSum = Math.max(tempSum,maxSum);
+
+    }
+    return maxSum;
+}
